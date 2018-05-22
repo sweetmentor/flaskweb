@@ -12,9 +12,9 @@ app = Flask(__name__)
 def show_my():
     return render_template("index1.html")
 
-@app.route("/search")
+@app.route("/search", methods = ['POST'])
 def do_search():
-    return "search page"
+    return "Search Page"
 
 # @app.route("/")
 # def show_hi():
