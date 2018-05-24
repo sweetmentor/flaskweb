@@ -12,13 +12,20 @@ app = Flask(__name__)
 def show_my():
     return render_template("index1.html")
 
-@app.route("/search", methods = ['POST'])
+@app.route("/search")
 def do_search():
-    return "Search Page"
+    #Getting Arguments from a GET query string
+    # make = request.form.get('make')
+    # model = request.form.get('model')
+    
+    #Getting Arguments from a POST query string
+    make = request.form.get('make')
+    model = request.form.get('model')
+    return "You searched for car make and model"
 
 # @app.route("/")
 # def show_hi():
-#     return "hi there"
+#     return                                                                                                                                            "hi there"
 
 
 @app.route("/time")
